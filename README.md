@@ -8,3 +8,7 @@
 * **Jowo nib section**: Jowo #6 nibs almost are standard for fountain pens, this model provides an easy way to create a section for the nib.
 
 ![Rendered Jowo nib section](https://raw.githubusercontent.com/voldyman/3d-models/1c6c04818ca4370c2e338af172804258bca60725/jowo-6-section/section.png)
+
+* **Nightstand Tray**: a tray to keep it on my nightstand, it has grooves for Anker soundcore sleep earphones, and eye drops for dry eyes.
+
+![Rendered tray for nightstand](https://github.com/voldyman/3d-models/blob/ddb6f2abf0b1491d6c652c9d445af850db459f2f/tray/tray.png?raw=true)
