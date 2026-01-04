@@ -12,3 +12,7 @@
 * **Nightstand Tray**: a tray to keep it on my nightstand, it has grooves for Anker soundcore sleep earphones, and eye drops for dry eyes.
 
 ![Rendered tray for nightstand](https://github.com/voldyman/3d-models/blob/ddb6f2abf0b1491d6c652c9d445af850db459f2f/tray/tray.png?raw=true)
+
+* **Screw Cell**: a capsule that is screwed together tightly and can be used to hold small items.
+
+![Rendered screw cell](https://github.com/voldyman/3d-models/blob/45b9a812de4f5dad7fc3253bdf0f2fff6bd59955/screw-cell/screw-cell.png?raw=true)
