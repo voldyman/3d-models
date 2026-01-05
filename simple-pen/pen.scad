@@ -1,5 +1,6 @@
 include <BOSL2/std.scad>
 include <BOSL2/threading.scad>
+include <./housing.scad>
 
 body_l = 81.9;
 body_d = 13.1;
@@ -13,7 +14,7 @@ section_l = 19.89;
 
 section_thread_l = 8.95;
 section_thread_d = 8.95;
-section_thread_pitch = section_thread_l/10;
+section_thread_pitch = section_thread_l / 10;
 section_thread_base_d = 8.4;
 
 section_inner_d = section_thread_d - 2;
@@ -42,7 +43,7 @@ module body(anchor, orient) {
   diff() {
     body_outer_cyl()
       attach(BOT, BOT, inside=true, overlap=1)
-        threaded_rod(d=section_thread_d+0.5, l=section_thread_l, pitch=section_thread_pitch, lead_in_shape="smooth", internal=true)
+        threaded_rod(d=section_thread_d + 0.5, l=section_thread_l, pitch=section_thread_pitch, lead_in_shape="smooth", internal=true)
           attach(TOP, BOT, overlap=1)
             cyl(d=body_inner_cyl_d, h=body_inner_cyl_l, rounding2=body_inner_cyl_d / 3);
   }
@@ -62,12 +63,15 @@ module cap(anchor, orient) {
 }
 
 module section(anchor, orient) {
+
   diff() {
     cyl(d=section_d, h=section_l, anchor=anchor, orient=orient) {
+      attach(TOP, TOP, inside=true, overlap=0.1)
+        nib_housing(internal=true);
       attach(BOT, TOP)
         threaded_rod(d=section_thread_d, l=section_thread_l, pitch=section_thread_pitch, lead_in_shape="smooth", end_len=section_thread_l / 6);
       attach(TOP, TOP, inside=true, overlap=1)
-        cyl(d=section_inner_d, l=section_l + section_thread_l + 1);
+        cyl(d=section_inner_d-1, l=section_l + section_thread_l + 1);
     }
   }
 
@@ -88,12 +92,24 @@ module for_print() {
   left(80) section(anchor=BOT);
 }
 
+render_mode = "none";
 mode = "for_print";
 //mode = "assembled";
+//mode = "housing";
+//mode="section";
 
 if (mode == "for_print") {
   for_print();
-} else {
+} else if (mode == "section") {
+  projection(cut=true)
+    section(orient=BACK);
+} else if (mode == "housing") {
+  projection(cut=true)
+    diff()
+      cyl(l=section_l + 3, d=section_d, orient=BACK)
+        attach(TOP, TOP, inside=true, overlap=0.1)
+          nib_housing();
+} else if (mode == "assembled") {
   projection(cut=true) {
     assembled();
   }
