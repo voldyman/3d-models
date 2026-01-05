@@ -10,9 +10,9 @@ cap_l = 66.74;
 cap_clip_l = 41;
 
 section_d = 11.87;
-section_l = 19.89;
+section_l = 19.89 + 2;
 
-section_thread_l = 8.95;
+section_thread_l = 8.95 - 1;
 section_thread_d = 8.95;
 section_thread_pitch = section_thread_l / 10;
 section_thread_base_d = 8.4;
@@ -69,7 +69,7 @@ module section(anchor, orient) {
       attach(TOP, TOP, inside=true, overlap=0.1)
         nib_housing(internal=true);
       attach(BOT, TOP)
-        threaded_rod(d=section_thread_d, l=section_thread_l, pitch=section_thread_pitch, lead_in_shape="smooth", end_len=section_thread_l / 6);
+        threaded_rod(d=section_thread_d, l=section_thread_l, pitch=section_thread_pitch, lead_in_shape="smooth", end_len1=section_thread_l / 6);
       attach(TOP, TOP, inside=true, overlap=1)
         cyl(d=section_inner_d-1, l=section_l + section_thread_l + 1);
     }
