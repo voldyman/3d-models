@@ -16,3 +16,7 @@
 * **Screw Cell**: a capsule that is screwed together tightly and can be used to hold small items.
 
 ![Rendered screw cell](https://github.com/voldyman/3d-models/blob/45b9a812de4f5dad7fc3253bdf0f2fff6bd59955/screw-cell/screw-cell.png?raw=true)
+
+* **Simple Pen**: a fountain pen that can take a jowo #6 nib and has a screw top cap.
+
+![Rendered simple pen](https://github.com/voldyman/3d-models/blob/1dc40a649bfd130ab66eaa4b51adb46568d5e828/simple-pen/pen.png?raw=true)
