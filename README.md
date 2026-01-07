@@ -20,3 +20,6 @@
 * **Simple Pen**: a fountain pen that can take a jowo #6 nib and has a screw top cap.
 
 ![Rendered simple pen](https://github.com/voldyman/3d-models/blob/1dc40a649bfd130ab66eaa4b51adb46568d5e828/simple-pen/pen.png?raw=true)
+
+* **Comb Holder**: a bow to hold a rat tail comb.
+![Rendered comb holder] (https://github.com/voldyman/3d-models/blob/6e811751621f3604a3b9b7f1bf3e4a1333190fcc/comb-holder/holder.png?raw=true)
