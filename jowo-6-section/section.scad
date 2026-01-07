@@ -43,9 +43,6 @@ section_wall_thickness = 2;
 // Thread lead-in angle
 thread_lead_in_angle = 30.0;
 
-// Resolution
-$fn = 100;
-
 // Calculate total length for housing
 full_length = collar_width + grip_length + body_length + thread_length + step_length + tail_length;
 
@@ -120,7 +117,10 @@ module nib_section() {
 
 // Render mode: "both", "housing", "section"
 render_mode = "both";
-
+if (render_mode != "none") {
+  // Resolution
+  $fn = 100;
+}
 if (render_mode == "both" || render_mode == "housing") {
   nib_housing(internal=false);
 }
