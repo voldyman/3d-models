@@ -9,7 +9,7 @@ cap_d = 14.9;
 cap_l = 66.74;
 cap_clip_l = 41;
 
-section_d = 11.87;
+section_d = 10;
 section_l = 19.89 + 2;
 
 section_thread_l = 8.95 - 1;
@@ -26,7 +26,7 @@ body_outer_thread_pitch = 1;
 body_inner_cyl_d = body_d - (1.5 * 2);
 body_inner_cyl_l = body_l + body_outer_thread_l - section_thread_l - 3;
 
-//$fn = 100;
+// $fn = 100;
 
 assert(section_d < body_outer_thread_d, "body outer threads should be bigger than section to fit in the cap");
 module body(anchor, orient) {
@@ -94,9 +94,9 @@ module for_print() {
 
 render_mode = "none";
 mode = "for_print";
-// mode = "assembled";
+//mode = "assembled";
 //mode = "housing";
-//mode="section";
+// mode="section";
 
 if (mode == "for_print") {
   for_print();
